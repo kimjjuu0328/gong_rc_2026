@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Memo</title>
+    <style>
+
+        body{
+            font-family: "Noto Sans CJK KR", "Noto Sans KR", "NanumGothic", Arial, sans-serif;
+            background:#f4f4f4;
+            margin:0;
+            padding:20px;
+        }
+
+        .container{
+            background:white;
+            max-width:700px;
+            margin:auto;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align:center;
+        }
+
+        textarea{
+            width:100%;
+            height:300px;
+            font-size:16px;
+            padding:10px;
+            box-sizing:border-box;
+        }
+
+        button{
+            margin-top:10px;
+            padding:10px 20px;
+            font-size:16px;
+        }
+
+    </style>
+
+</head>
+
+    <body>
+
+    <div class="container">
+
+    <h1>메모장</h1>
+
+    <textarea id="memo"></textarea>
+
+    <br>
+
+    <button onclick="saveNote()">
+    저장
+    </button>
+
+    </div>
+
+    <script>
+
+    async function loadNote(){
+
+        const text =
+            await pywebview.api.load_note();
+
+        document.getElementById("memo").value =
+            text;
+    }
+
+    async function saveNote(){
+
+        const text =
+            document.getElementById("memo").value;
+
+        await pywebview.api.save_note(text);
+
+        alert("저장 완료");
+    }
+
+    window.onload = loadNote;
+
+    </script>
+
+    </body>
+</html>
