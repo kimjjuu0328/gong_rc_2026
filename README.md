@@ -8,12 +8,24 @@
 git config -- user.name "kimjjuu0328"
 git config -- user.email "kimjjuu0328@gmail.com"
 
-2026-06-24
+2026-06-23
 
 -1교시:google slide 정보공유
 -2교시:if 조건문,bool 자료형
 -3교시:github io 페이지 만들기
 -4교시:삼항연산자,False로 변환되는 예
+-5교시:
+-6교시:
+-7교시:
+-8교시:
+
+2026-06-24
+
+
+-1교시:while loop
+-2교시:사전 평가 시험
+-3교시:함수 작성,type hint doc string, return
+-4교시:인자, 포지셔널 인자, 가변 인자, 디폴트 인자
 -5교시:
 -6교시:
 -7교시:
