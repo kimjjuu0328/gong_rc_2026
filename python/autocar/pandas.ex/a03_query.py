@@ -14,6 +14,7 @@ def main():
     cond = df["온도"] >= 30
     print(cond, type(cond))
     print(df[cond])
+    print(df.T)
 
 
 if __name__ == "__main__":
