@@ -8,14 +8,18 @@ def main():
     index = ["초여름", "늦봄", "한여름"]
     df = pd.DataFrame(value, index=index, columns=columns, dtype=np.uint8)
 
-    value2 = [[37, 90, 120, 94]]
-    index2 = ["한여름"]
-    df2 = pd.DataFrame(value2, index=index2, columns=columns)
+   volue2 = [[37,90,120,94]]
+index2 = ["한여름"]
+df2 = pd.DataFrame(volue2, index=index2, columns=columns)
 
-    # print(df._append(df2))
-    print(pd.concat([df, df2], axis=0))
-    df.insert(0, "자외선", [6, 3, 7])
-    print(df)
+# print(df _append(df2))
+print(pd.concat([df, df2], axis=0))
+df.insert(0, "자외선", [6, 3, 7])
+print(df)
+print(df.sort_index(inplace=True))
+# sort_df = df.sort_index()
+print(df)
+# dropna, fillna, replace, sort, ....
 
 if __name__ == "__main__":
     main()
